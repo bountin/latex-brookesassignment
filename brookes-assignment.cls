@@ -78,13 +78,13 @@
 % redefine headers
 \makeatletter
 	\newcommand\headerleft{%
-		\ifx\@modulecode\@empty\relax\else\@modulecode{}\fi 
+		\ifx\@modulecode\@empty\relax\else\@modulecode{} \@modulename\fi 
 	}%	
 	\newcommand\headercentre{%
 		\@studentname, \ifx\@studentnumber\@empty\relax\else\@studentnumber\fi
 	}%
 	\newcommand\headerright{%
-		\ifx\@assignmentname\@empty\relax\else\@assignmentname{}\fi 
+		\ifx\@subtitle\@empty\relax\else\@subtitle{}\fi 
 	}%	
 	\newcommand{\footercentre}{%
 		\thepage
@@ -112,7 +112,7 @@
 				\emph{\@modulecode} \@modulename \\
 			\fi
 			\ifx \@assignmentname \@empty \relax \else
-				\emph{\@assignmentname} \\
+				{\@assignmentname} \\
 			\fi
 		\end{flushleft}
 	\end{minipage}
